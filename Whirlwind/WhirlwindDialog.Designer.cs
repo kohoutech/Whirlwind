@@ -1,6 +1,6 @@
 ﻿namespace Whirlwind
 {
-    partial class Form1
+    partial class WhirlwindDialog
     {
         /// <summary>
         /// Required designer variable.
