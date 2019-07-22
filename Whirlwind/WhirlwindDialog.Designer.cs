@@ -28,45 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHoldOn = new System.Windows.Forms.Button();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
-            this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
             this.lblChordHold = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRate = new System.Windows.Forms.Label();
+            this.lblRange = new System.Windows.Forms.Label();
+            this.lblMode = new System.Windows.Forms.Label();
+            this.btnHoldOn = new Transonic.Widget.PushButton();
+            this.sldMode = new Transonic.Widget.Slider();
+            this.sldRange = new Transonic.Widget.Slider();
+            this.sldRate = new Transonic.Widget.Slider();
             this.SuspendLayout();
-            // 
-            // btnHoldOn
-            // 
-            this.btnHoldOn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnHoldOn.Location = new System.Drawing.Point(21, 41);
-            this.btnHoldOn.Name = "btnHoldOn";
-            this.btnHoldOn.Size = new System.Drawing.Size(30, 50);
-            this.btnHoldOn.TabIndex = 1;
-            this.btnHoldOn.UseVisualStyleBackColor = true;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(83, 26);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 80);
-            this.vScrollBar1.TabIndex = 2;
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(137, 26);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(17, 80);
-            this.vScrollBar2.TabIndex = 3;
-            // 
-            // vScrollBar3
-            // 
-            this.vScrollBar3.Location = new System.Drawing.Point(187, 26);
-            this.vScrollBar3.Name = "vScrollBar3";
-            this.vScrollBar3.Size = new System.Drawing.Size(17, 80);
-            this.vScrollBar3.TabIndex = 4;
             // 
             // lblChordHold
             // 
@@ -79,38 +49,70 @@
             this.lblChordHold.TabIndex = 5;
             this.lblChordHold.Text = "On / Off";
             // 
-            // label1
+            // lblRate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(179, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Rate";
+            this.lblRate.AutoSize = true;
+            this.lblRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRate.ForeColor = System.Drawing.Color.Black;
+            this.lblRate.Location = new System.Drawing.Point(179, 2);
+            this.lblRate.Name = "lblRate";
+            this.lblRate.Size = new System.Drawing.Size(33, 15);
+            this.lblRate.TabIndex = 6;
+            this.lblRate.Text = "Rate";
             // 
-            // label2
+            // lblRange
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(123, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Range";
+            this.lblRange.AutoSize = true;
+            this.lblRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRange.ForeColor = System.Drawing.Color.Black;
+            this.lblRange.Location = new System.Drawing.Point(123, 2);
+            this.lblRange.Name = "lblRange";
+            this.lblRange.Size = new System.Drawing.Size(44, 15);
+            this.lblRange.TabIndex = 7;
+            this.lblRange.Text = "Range";
             // 
-            // label3
+            // lblMode
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(72, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Mode";
+            this.lblMode.AutoSize = true;
+            this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode.ForeColor = System.Drawing.Color.Black;
+            this.lblMode.Location = new System.Drawing.Point(72, 2);
+            this.lblMode.Name = "lblMode";
+            this.lblMode.Size = new System.Drawing.Size(39, 15);
+            this.lblMode.TabIndex = 8;
+            this.lblMode.Text = "Mode";
+            // 
+            // btnHoldOn
+            // 
+            this.btnHoldOn.BackColor = System.Drawing.Color.LightCoral;
+            this.btnHoldOn.Location = new System.Drawing.Point(21, 41);
+            this.btnHoldOn.Name = "btnHoldOn";
+            this.btnHoldOn.Size = new System.Drawing.Size(30, 50);
+            this.btnHoldOn.TabIndex = 9;
+            // 
+            // sldMode
+            // 
+            this.sldMode.BackColor = System.Drawing.Color.Tomato;
+            this.sldMode.Location = new System.Drawing.Point(83, 26);
+            this.sldMode.Name = "sldMode";
+            this.sldMode.Size = new System.Drawing.Size(17, 80);
+            this.sldMode.TabIndex = 10;
+            // 
+            // sldRange
+            // 
+            this.sldRange.BackColor = System.Drawing.Color.Tomato;
+            this.sldRange.Location = new System.Drawing.Point(137, 26);
+            this.sldRange.Name = "sldRange";
+            this.sldRange.Size = new System.Drawing.Size(17, 80);
+            this.sldRange.TabIndex = 11;
+            // 
+            // sldRate
+            // 
+            this.sldRate.BackColor = System.Drawing.Color.Tomato;
+            this.sldRate.Location = new System.Drawing.Point(187, 26);
+            this.sldRate.Name = "sldRate";
+            this.sldRate.Size = new System.Drawing.Size(17, 80);
+            this.sldRate.TabIndex = 12;
             // 
             // WhirlwindDialog
             // 
@@ -118,14 +120,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(224, 111);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblChordHold);
-            this.Controls.Add(this.vScrollBar3);
-            this.Controls.Add(this.vScrollBar2);
-            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.sldRate);
+            this.Controls.Add(this.sldRange);
+            this.Controls.Add(this.sldMode);
             this.Controls.Add(this.btnHoldOn);
+            this.Controls.Add(this.lblMode);
+            this.Controls.Add(this.lblRange);
+            this.Controls.Add(this.lblRate);
+            this.Controls.Add(this.lblChordHold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "WhirlwindDialog";
             this.Text = "Whirlwind-001";
@@ -136,14 +138,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnHoldOn;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
-        private System.Windows.Forms.VScrollBar vScrollBar3;
         private System.Windows.Forms.Label lblChordHold;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRate;
+        private System.Windows.Forms.Label lblRange;
+        private System.Windows.Forms.Label lblMode;
+        private Transonic.Widget.PushButton btnHoldOn;
+        private Transonic.Widget.Slider sldMode;
+        private Transonic.Widget.Slider sldRange;
+        private Transonic.Widget.Slider sldRate;
     }
 }
 
